@@ -13,10 +13,10 @@ interface NavItem {
 }
 
 const NAV_ITEMS: NavItem[] = [
-    {label: "Home", page: "home"},
-    {label: "About", page: "about"},
-    {label: "Projects", page: "projects"},
-    {label: "Contact", page: "contact"},
+    {label: "Start", page: "home"},
+    {label: "O mnie", page: "about"},
+    {label: "Projekty", page: "projects"},
+    {label: "Kontakt", page: "contact"},
 ]
 const Navbar = () => {
 
@@ -27,17 +27,17 @@ const Navbar = () => {
 
     return (
         <header
-            className="w-full mx-auto  p-4 sm:px-20 fixed top-0 z-50 shadow bg-white dark:bg-stone-900 dark:border-b dark:border-stone-600">
+            className="w-full mx-auto  p-4 sm:px-20 fixed top-0 z-50 shadow bg-white dark:bg-gray-900 dark:border-b dark:border-gray-600">
             <div className={'justify-between md:items-center md:flex'}>
                 <div>
                     <div className={'flex items-center justify-between'}>
-                        <Link to={'home'}>
-                            <div className={'md:py-5 md:block'}>
+                        <div className={'md:py-5 md:block'}>
+                            <Link to={'home'}>
                                 <h2 className={'text-2xl font-bold'}>Tomasz Steć</h2>
-                            </div>
-                        </Link>
+                            </Link>
+                        </div>
                         <div className={'md:hidden'}>
-                            <button onClick={() => setNavbar(!navbar)}>
+                            <button title={'przełącz menu'} onClick={() => setNavbar(!navbar)}>
                                 {navbar ? <IoMdClose size={20}/> : <IoMdMenu size={20}/>}
                             </button>
                         </div>
@@ -55,7 +55,7 @@ const Navbar = () => {
                                 key={idx}
                                 to={item.page}
                                 className={
-                                    "block lg:inline-block text-neutral-900  hover:text-neutral-500 dark:text-neutral-100"
+                                    "block lg:inline-block text-neutral-900  hover:text-neutral-500 dark:text-neutral-100 cursor-pointer"
                                 }
                                 activeClass="active"
                                 spy={true}
@@ -69,11 +69,13 @@ const Navbar = () => {
 
                         })}
                             {currentTheme === "dark" ? (
-                                <button onClick={() => setTheme('light')} className={'bg-slate-100 p-2 rounded-xl'}>
+                                <button title={'zmień motyw'} onClick={() => setTheme('light')}
+                                        className={'bg-slate-100 p-2 rounded-xl'}>
                                     <RiSunLine size={20} color={'black'}/>
                                 </button>
                             ) : (
-                                <button onClick={() => setTheme('dark')} className={'bg-slate-100 p-2 rounded-xl'}>
+                                <button title={'zmień motyw'} onClick={() => setTheme('dark')}
+                                        className={'bg-slate-100 p-2 rounded-xl'}>
                                     <RiMoonFill size={20}/>
                                 </button>
                             )}

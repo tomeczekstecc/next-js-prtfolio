@@ -17,7 +17,7 @@ const HeroSection = () => {
                     <h1 className={'text-6xl font-bold mt-6 md:text-7xl md:mt-0'}>Cześć, jestem Tomasz</h1>
                     <p className={'text-xl mt-4 mb-6'}>
                         Jestem
-                        <span className={'font-semibold text-teal-600 '}> programistą </span>
+                        <span className={'font-semibold dark:text-teal-600 text-teal-700 '}> programistą </span>
                         specjalizującym się w tworzeniu aplikacji webowych i stron internetowych.
                     </p>
                     <Link
@@ -27,7 +27,7 @@ const HeroSection = () => {
                         smooth={true}
                         offset={-100}
                         duration={500}
-                        className={'text-neutral-100 font-semibold px-6 py-3 bg-teal-600 rounded hover:bg-teal-500'}
+                        className={'text-white font-semibold px-6 py-3 bg-teal-700 rounded hover:bg-teal-600'}
                     >
                         Projekty
                     </Link>
@@ -40,7 +40,7 @@ const HeroSection = () => {
                       smooth={true}
                       offset={-100}
                       duration={500}>
-                    <HiArrowDown size={40} className={'animate-bounce text-teal-600'}/>
+                    <HiArrowDown size={40} className={'animate-bounce text-teal-700'}/>
                 </Link>
             </div>
         </section>
