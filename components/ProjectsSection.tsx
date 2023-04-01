@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from "next/image";
 import Link from "next/link";
-import {BsArrowUpRightSquare, BsGithub} from "react-icons/bs";
+import {BsArrowUpRightSquare} from "react-icons/bs";
 import {SiGitlab} from "react-icons/si";
 import SlideUp from "@/components/SlideUp";
 
