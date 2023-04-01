@@ -26,9 +26,12 @@ const techs = [
     {name: 'REST API'},
     {name: 'tRPC'},
     {name: 'GraphQL'},
+    {name: 'Strapi'},
     {name: 'Apollo'},
     {name: 'Redux'},
     {name: 'Redux-Toolkit'},
+    {name: 'React-Query'},
+    {name: 'Formik'},
     {name: 'Keycloak'},
     {name: 'IntelliJ'},
 ]

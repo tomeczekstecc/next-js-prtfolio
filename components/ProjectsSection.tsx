@@ -11,7 +11,7 @@ const projects = [
         description:
             "Aplikacja służąca do zarządzania wnioskami stypendialnymi, dokonywania oceny wniosków, zarządzania ocenami, przydzielania oceniających oraz udostępniania materiałów pomocniczych. Obsługuje cały proces po złożeniu wniosku przez ucznia lub opiekuna do jego oceny przez oceniającego, po zatwierdzenie przez menadżera.",
         image: "/project_1.png",
-        repo: "https://repo.com/hqasmei/thankful-thoughts",
+        repo: "https://gitlab.com/tomeczekstecc/ocena-web-chakra-ui",
         link: "https://stypendia-ocena-dev.tomaszstec.me/",
         icon: <SiGitlab size={30}/>,
         techs: ['React', 'TypeScript', 'Chakra UI', 'Node.js', 'Express.js', 'GraphQL', 'MySQL', 'TypeORM', 'Docker', 'GitLab CI/CD', 'Keycloak']
@@ -20,16 +20,21 @@ const projects = [
         name: "Data overview",
         description: "Aplikacja służąca do przeglądu danych statystycznych, np. sprzedażowych, oferująca różne ciekawe wizualizacje danych, w różnych konfigurowalnych przez użytkownika układach. Wersja poglądowa, ponieważ hostowana jest na darmowyej platwormie, pierwsze uruchomienie może zająć ok minuty.",
         image: "/project_2.png",
-        repo: "https://repo.com/hqasmei/platoio",
-        link: "https://platoio.com/register",
+        repo: "https://gitlab.com/tomeczekstecc/data-overview",
+        link: "https://fullstack-dashboard-client-2g2w.onrender.com",
+        icon: <SiGitlab size={30}/>,
+        techs: ['React', 'Vite', 'Material UI', 'Node.js', 'Express.js', 'Redux', 'REST Api', 'Docker', 'Mongo DB']
+
     },
     {
-        name: "Kator Family Photos",
+        name: "Ecommerce Shop",
         description:
-            "Kator Family Photos is a photos and video digitization service in the LA area.",
-        image: "/project_3.jpg",
-        repo: "https://repo.com/hqasmei/katorfamilyphotos",
-        link: "https://katorfamilyphotos.com/",
+            "Testowy sklep z obsługą płatności przy użyciu Stripe oraz cmsa Strapi. Zapewnia przegląd produktów np. wg kategorii, obsługuje koszyk, formularz zamówienia oraz płatności.",
+        image: "/project_3.png",
+        repo: "hhttps://gitlab.com/tomeczekstecc/ecommerce-shop-strapi",
+        link: "/",
+        icon: <SiGitlab size={30}/>,
+        techs: ['React', 'Strapi', 'Stripe', 'Material UI', 'Redux', 'Formik', 'Docker', 'GitLab CI/CD']
     },
 ]
 
@@ -70,9 +75,10 @@ const ProjectsSection = () => {
                                                     className={'hover:-translate-y-1 transition-transform cursor-pointer'}>{project.icon}</div>
                                             </Link>
                                             <br/>
-                                            <Link href={project.link} title={'link do projektu'}>
-                                                <BsArrowUpRightSquare size={30}
-                                                                      className={'hover:-translate-y-1 transition-transform cursor-pointer'}/></Link>
+                                            {project.link !== '/' &&
+                                                <Link href={project.link} title={'link do projektu'}>
+                                                    <BsArrowUpRightSquare size={30}
+                                                                          className={'hover:-translate-y-1 transition-transform cursor-pointer'}/></Link>}
                                         </div>
                                     </div>
                                 </div>
