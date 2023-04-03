@@ -15,7 +15,7 @@ export default function Head() {
             <meta property="og:description" content="Tomasz Steć developer,programista, tworzenie stron internetowych,
             tworzenie aplikacji internetowych, tworzenie aplikacji mobilnych, tworzenie aplikacji desktopowych,
             tworzenie aplikacji webowych, tworzenie aplikacji, tworzenie stron, tworzenie stron internetowych,
-            tworzenie blogów, tworzenie blogów internetowych,
+            tworzenie blogów, tworzenie blogów internetowych, Tarnowskie Góry, Tarnów, Kraków, Warszawa, Wrocław,Katowice
                 "/>
             <meta property="og:type" content="website"/>
             <meta property="og:url" content="https://tomeczekstecc.github.io/"/>
