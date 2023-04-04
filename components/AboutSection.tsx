@@ -55,7 +55,7 @@ const AboutSection = () => {
                         <br/>
                         <p>
                             Potrafię pracować, zarówno samodzielnie, jak i w zespole. Jestem osobą, która lubi wyzwania,
-                            lubi sprawdzić się w nowych, często w trudnych sytuacjach. NIe rzadko rzucano mnie na
+                            lubi sprawdzić się w nowych, często w trudnych sytuacjach. Nie rzadko rzucano mnie na
                             głęboką wodę, zawsze radziłem sobie z tym dobrze. Nie straszne trudne zadania, ze wszystkimi
                             w końcu sobie poradzę.
                         </p>
