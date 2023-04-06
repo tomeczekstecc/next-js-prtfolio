@@ -6,19 +6,33 @@ import {
     AiOutlineYoutube,
     AiFillGitlab,
 } from 'react-icons/ai'
+import {BiMailSend, BiPhone} from "react-icons/bi";
 
 const Footer = () => {
     return (
         <footer className='mx-auto max-w-3xl px-4 sm:px-6 md:max-w-5xl '>
             <hr className='w-full h-0.5 mx-auto mt-8 bg-neutral-200 border-0'></hr>
             <div className='mx-auto  p-4 flex flex-col text-center text-neutral-900 md:flex-row md:justify-between'>
-                <div className='flex flex-row items-center justify-center space-x-1 text-neutral-500 dark:text-neutral-100'>
+                <div
+                    className='flex flex-row items-center justify-center space-x-1 text-neutral-500 dark:text-neutral-100'>
                     © 2023 Tomasz Steć
                     <a
                         title={'link do sekcji głównej'}
                         href='/'
                         className='hover:underline'
                     ></a>
+
+
+                </div>
+                <div
+                    className='flex space-x-1 justify-center align-middle items-center text-neutral-500 dark:text-neutral-100'>
+                    <BiPhone/>
+                    <div>502 990 876</div>
+                </div>
+                <div
+                    className='flex space-x-1 justify-center align-middle items-center text-neutral-500 dark:text-neutral-100'>
+                    <BiMailSend/>
+                    <div>tomeczekstecc@gmail.com</div>
                 </div>
                 <div className='flex flex-row items-center justify-center space-x-2 mb-1'>
                     <a
