@@ -2,7 +2,7 @@ import * as console from "console";
 import {NextResponse} from "next/server";
 import {mailOptions, transporter} from "@/config/nodemailer";
 
-export async function POST(request: Request, response: Response) {
+export async function POST(request: Request) {
 
     const body = await request.json()
 

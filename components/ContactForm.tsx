@@ -115,7 +115,7 @@ const ContactForm = () => {
     useEffect(
         () => {
             if (sent) {
-                const sentTimeOut = setTimeout(() => {
+                setTimeout(() => {
                     setSent(false)
                 }, 3000)
             }

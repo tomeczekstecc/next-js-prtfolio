@@ -3,7 +3,6 @@ import {
     AiOutlineGithub,
     AiOutlineTwitter,
     AiOutlineLinkedin,
-    AiOutlineYoutube,
     AiFillGitlab,
 } from 'react-icons/ai'
 import {BiMailSend, BiPhone} from "react-icons/bi";
