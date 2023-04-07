@@ -34,7 +34,7 @@ const Input = ({name, label, required, placeholder, value, onChange, invalid, in
     return (
         <div className={'my-4'}>
             <label aria-required={required} htmlFor={name}>{label}
-                {required && <sup className={'text-red-400 m-1 mt-3 '}>*</sup>}
+                {required && <sup className={'text-red-700 m-1 mt-3  dark:text-red-400'}>*</sup>}
             </label>
 
             {input === 'input' ?
@@ -52,7 +52,7 @@ const Input = ({name, label, required, placeholder, value, onChange, invalid, in
 
             }
 
-            {invalid && <span className={'text-red-400 text-sm'}>
+            {invalid && <span className={'text-red-700 text-sm dark:text-red-400'}>
                 {required && 'To pole jest wymagane'}
             </span>}
         </div>
@@ -117,7 +117,7 @@ const ContactForm = () => {
             if (sent) {
                 setTimeout(() => {
                     setSent(false)
-                }, 3000)
+                }, 5000)
             }
             //remove timeout when unmounting
             return () => {
@@ -131,9 +131,10 @@ const ContactForm = () => {
         <div className={'w-fullm-auto'}>
             {sent &&
                 <div
-                    className={'text-center text-2xl bg-teal-700 py-2 rounded my-3 transition-all max-h-screen max-h-0'}>Wiadomość
-                    wysłano,
-                    dzięki!!!</div>}
+                    className={'text-center text-xl bg-teal-700 py-2 rounded my-3'}>Dziękuję, wiadomość
+                    otrzymałem. Niedługo skontaktuję się z Tobą. Do usłyszenia!
+                </div>
+            }
             <form onSubmit={handleSubmit}>
                 <h3 className={'text-3xl font-bold'}>Formularz kontaktowy</h3>
                 <Input setTouched={setTouched} invalid={!state.name && touched?.name} input={'input'}
