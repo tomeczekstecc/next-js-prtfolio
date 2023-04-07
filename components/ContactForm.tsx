@@ -129,12 +129,12 @@ const ContactForm = () => {
 
     return (
         <div className={'w-fullm-auto'}>
-            {sent &&
-                <div
-                    className={'text-center text-xl bg-teal-700 py-2 rounded my-3'}>Dziękuję, wiadomość
-                    otrzymałem. Niedługo skontaktuję się z Tobą. Do usłyszenia!
-                </div>
-            }
+            {/*{sent &&*/}
+            <div
+                className={'text-center text-white text-xl bg-teal-700 py-2 rounded my-3'}>Dziękuję, wiadomość
+                otrzymałem. Niedługo skontaktuję się z Tobą. Do usłyszenia!
+            </div>
+            {/*}*/}
             <form onSubmit={handleSubmit}>
                 <h3 className={'text-3xl font-bold'}>Formularz kontaktowy</h3>
                 <Input setTouched={setTouched} invalid={!state.name && touched?.name} input={'input'}
