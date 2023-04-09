@@ -1,6 +1,7 @@
 'use client'
-import React, {useEffect, useReducer} from 'react'
+import React, {useReducer} from 'react'
 import {sendContactForm} from "@/lib/api";
+import toast from "react-hot-toast";
 
 const enum REDUCER_ACTION_TYPE {
     SET_NAME,
@@ -68,7 +69,6 @@ const ContactForm = () => {
         phone: false,
         msg: false
     })
-    const [sent, setSent] = React.useState(false)
 
     const initState = {
         name: '',
@@ -106,35 +106,17 @@ const ContactForm = () => {
                 phone: false,
                 msg: false
             })
-            setLoading(false)
-            setSent(true)
+
+            toast.success('Wiadomość została wysłana')
+        } else {
+            toast.error('Wystąpił błąd')
         }
         setLoading(false)
     }
 
-    useEffect(
-        () => {
-            if (sent) {
-                setTimeout(() => {
-                    setSent(false)
-                }, 5000)
-            }
-            //remove timeout when unmounting
-            return () => {
-                clearTimeout(1)
-            }
-        }
-        , [sent]
-    )
-
     return (
         <div className={'w-fullm-auto'}>
-            {sent &&
-                <div
-                    className={'text-center text-white text-xl bg-teal-700 py-2 rounded my-3'}>Dziękuję, wiadomość
-                    otrzymałem. Niedługo skontaktuję się z Tobą. Do usłyszenia!
-                </div>
-            }
+
             <form onSubmit={handleSubmit}>
                 <h3 className={'text-3xl font-bold'}>Formularz kontaktowy</h3>
                 <Input setTouched={setTouched} invalid={!state.name && touched?.name} input={'input'}

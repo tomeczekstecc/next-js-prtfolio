@@ -1,4 +1,4 @@
-import Image from 'next/image'
+'use client'
 import {Inter} from '@next/font/google'
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
