@@ -37,6 +37,16 @@ const projects = [
         techs: ['React', 'Strapi', 'Stripe', 'Material UI', 'Redux', 'Formik', 'Docker', 'GitLab CI/CD']
     },
     {
+        name: "Wyszukiwarka filmów",
+        description:
+            "Wyszukiwarke filmów z wykorzystaniem API The Movie Database. Zapewnia przegląd filmów, ich szczegółowe informacje",
+        image: "/project_5.png",
+        repo: "https://gitlab.com/tomeczekstecc/moviesdb",
+        link: "https://moviesdb.tomaszstec.me",
+        icon: <SiGitlab size={30}/>,
+        techs: ['React', 'NextJS', 'React-Query', 'REST API', 'Tailwind CSS', 'Vercel']
+    },
+    {
         name: "Markdown Blog",
         description:
             "Blog utworzony przy pomocy NextJS, Gray-Matter i Remark. Zapewnia możliwość tworzenia postów z plików markdown, które są automatycznie przetwarzane na wpisy postów na stronie. Wykorzystano strategie Static Generation, dzięki której strona uzyskała maksymalną ilosć punktów w Lighthouse.",
