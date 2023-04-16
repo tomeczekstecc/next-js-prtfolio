@@ -35,7 +35,7 @@ const Input = ({name, label, required, placeholder, value, onChange, invalid, in
     return (
         <div className={'my-4'}>
             <label aria-required={required} htmlFor={name}>{label}
-                {required && <sup className={'text-red-700 m-1 mt-3  dark:text-red-400'}>*</sup>}
+                {required && <sup className={'text-red-700 m-1 mt-3 dark:text-red-400'}>*</sup>}
             </label>
 
             {input === 'input' ?

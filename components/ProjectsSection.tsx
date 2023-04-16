@@ -36,6 +36,16 @@ const projects = [
         icon: <SiGitlab size={30}/>,
         techs: ['React', 'Strapi', 'Stripe', 'Material UI', 'Redux', 'Formik', 'Docker', 'GitLab CI/CD']
     },
+    {
+        name: "Markdown Blog",
+        description:
+            "Blog utworzony przy pomocy NextJS, Gray-Matter i Remark. Zapewnia możliwość tworzenia postów z plików markdown, które są automatycznie przetwarzane na wpisy postów na stronie. Wykorzystano strategie Static Generation, dzięki której strona uzyskała maksymalną ilosć punktów w Lighthouse.",
+        image: "/project_4.png",
+        repo: "https://gitlab.com/tomeczekstecc/nextjs-markdown-blog",
+        link: "https://blog.tomaszstec.me",
+        icon: <SiGitlab size={30}/>,
+        techs: ['React', 'NextJS', 'Gray-Matter', 'Markdown', 'Remark', 'Tailwind CSS', 'Vercel']
+    },
 ]
 
 const ProjectsSection = () => {
