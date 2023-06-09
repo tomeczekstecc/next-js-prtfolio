@@ -7,6 +7,16 @@ import SlideUp from "@/components/SlideUp";
 
 const projects = [
     {
+        name: "Portal ze sklepem i blogiem",
+        description:
+            "Portal umożliwiający przeglądanie, usuwanie, edytowanie blogów, komentowania ich, przeglądanie, usuwanie, edytowanie filmów oraz pełny sklep z obsługą koszyka z funkcją dokonywania płatności za pomocą karty, gpay, blik oraz przelewów bankowych. Portal obsługuje w pełni funkcjonalny system obsługi autoryzacji i autentykacji.  ",
+        image: "/project_6.png",
+        repo: "https://gitlab.com/tomeczekstecc/martyna-tv",
+        link: "https://martyna-tv.vercel.app/store/",
+        icon: <SiGitlab size={30}/>,
+        techs: ['React', 'TypeScript', 'ShadCNUI', 'Node.js', 'Prisma', 'Redux/Redux Toolkit', 'tRPC', 'NextJS']
+    },
+    {
         name: "Ocena wniosków stypendialnych",
         description:
             "Aplikacja służąca do zarządzania wnioskami stypendialnymi, dokonywania oceny wniosków, zarządzania ocenami, przydzielania oceniających oraz udostępniania materiałów pomocniczych. Obsługuje cały proces po złożeniu wniosku przez ucznia lub opiekuna do jego oceny przez oceniającego, po zatwierdzenie przez menadżera.",
@@ -16,6 +26,7 @@ const projects = [
         icon: <SiGitlab size={30}/>,
         techs: ['React', 'TypeScript', 'Chakra UI', 'Node.js', 'Express.js', 'GraphQL', 'MySQL', 'TypeORM', 'Docker', 'GitLab CI/CD', 'Keycloak']
     },
+
     {
         name: "Data overview",
         description: "Aplikacja służąca do przeglądu danych statystycznych, np. sprzedażowych, oferująca różne ciekawe wizualizacje danych, w różnych konfigurowalnych przez użytkownika układach. Wersja poglądowa, ponieważ hostowana jest na darmowyej platwormie, pierwsze uruchomienie może zająć ok minuty.",
