@@ -14,7 +14,7 @@ const projects = [
         repo: "https://gitlab.com/tomeczekstecc/martyna-tv",
         link: "https://martyna-tv.vercel.app/store/",
         icon: <SiGitlab size={30}/>,
-        techs: ['React', 'TypeScript', 'ShadCNUI', 'Node.js', 'Prisma', 'Redux/Redux Toolkit', 'tRPC', 'NextJS']
+        techs: ['React', 'TypeScript', 'NextAuth.js', 'NextJS', 'Stripe', 'ShadCNUI', 'TailwindCSS', 'Node.js', 'Prisma', 'Redux/Redux Toolkit', 'tRPC']
     },
     {
         name: "Ocena wniosków stypendialnych",
