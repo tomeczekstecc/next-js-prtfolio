@@ -1,11 +1,9 @@
-import Image from 'next/image'
-import {Inter} from '@next/font/google'
+import {Inter} from "next/font/google"
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import ProjectsSection from "@/components/ProjectsSection";
 import ContactSection from "@/components/ContactSection";
 
-const inter = Inter({subsets: ['latin']})
 
 export default function Home() {
     return (
