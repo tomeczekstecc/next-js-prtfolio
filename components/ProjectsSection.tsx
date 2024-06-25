@@ -4,6 +4,7 @@ import Link from "next/link";
 import {BsArrowUpRightSquare} from "react-icons/bs";
 import {SiGitlab} from "react-icons/si";
 import SlideUp from "@/components/SlideUp";
+import getAllProjects from "@/app/actions/getAllProjects";
 
 const projects = [
     {
@@ -38,9 +39,31 @@ const projects = [
     },
 ]
 
-const ProjectsSection = () => {
+
+// const onSub = async (e: { preventDefault: () => void; }) => {
+//     e.preventDefault()
+//     await getAllProjects()
+// }
+
+
+type Project = {
+    title: string
+}
+
+const ProjectsSection = async () => {
+
+    const data = await getAllProjects()
+
+    console.log(data)
+
     return (
         <section id={'projects'}>
+            {
+                data.map((project: Project, index: number) => <div key={index}>
+                    <h1>{project.title}</h1>
+                    {/*<p>{project.description}</p>*/}
+                </div>)
+            }
             <h1 className={'text-center font-bold text-4xl'}>Przykładowe projekty
                 <hr className={'w-8 h-1 rounded mx-auto mt-4 border-2 border-teal-600'}/>
             </h1>
