@@ -18,7 +18,7 @@ const HeroSection = () => {
                     <p className={'text-xl mt-4 mb-6'}>
                         Jestem
                         <span className={'font-semibold dark:text-teal-600 text-teal-700 '}> programistą </span>
-                        specjalizującym się w tworzeniu aplikacji webowych i stron internetowych.
+                        specjalizującym się w tworzeniu aplikacji webowych i stron internetowych :)
                     </p>
                     <Link
                         to={'projects'}

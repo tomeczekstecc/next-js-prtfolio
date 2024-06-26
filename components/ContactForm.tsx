@@ -1,6 +1,7 @@
 'use client'
-import React, {useEffect, useReducer} from 'react'
+import React, {useReducer} from 'react'
 import {sendContactForm} from "@/lib/api";
+import toast from "react-hot-toast";
 
 const enum REDUCER_ACTION_TYPE {
     SET_NAME,
@@ -34,7 +35,7 @@ const Input = ({name, label, required, placeholder, value, onChange, invalid, in
     return (
         <div className={'my-4'}>
             <label aria-required={required} htmlFor={name}>{label}
-                {required && <sup className={'text-red-400 m-1 mt-3 '}>*</sup>}
+                {required && <sup className={'text-red-700 m-1 mt-3 dark:text-red-400'}>*</sup>}
             </label>
 
             {input === 'input' ?
@@ -52,7 +53,7 @@ const Input = ({name, label, required, placeholder, value, onChange, invalid, in
 
             }
 
-            {invalid && <span className={'text-red-400 text-sm'}>
+            {invalid && <span className={'text-red-700 text-sm dark:text-red-400'}>
                 {required && 'To pole jest wymagane'}
             </span>}
         </div>
@@ -68,7 +69,6 @@ const ContactForm = () => {
         phone: false,
         msg: false
     })
-    const [sent, setSent] = React.useState(false)
 
     const initState = {
         name: '',
@@ -106,34 +106,17 @@ const ContactForm = () => {
                 phone: false,
                 msg: false
             })
-            setLoading(false)
-            setSent(true)
+
+            toast.success('Wiadomość została wysłana')
+        } else {
+            toast.error('Wystąpił błąd')
         }
         setLoading(false)
     }
 
-    useEffect(
-        () => {
-            if (sent) {
-                setTimeout(() => {
-                    setSent(false)
-                }, 3000)
-            }
-            //remove timeout when unmounting
-            return () => {
-                clearTimeout(1)
-            }
-        }
-        , [sent]
-    )
-
     return (
         <div className={'w-fullm-auto'}>
-            {sent &&
-                <div
-                    className={'text-center text-2xl bg-teal-700 py-2 rounded my-3 transition-all max-h-screen max-h-0'}>Wiadomość
-                    wysłano,
-                    dzięki!!!</div>}
+
             <form onSubmit={handleSubmit}>
                 <h3 className={'text-3xl font-bold'}>Formularz kontaktowy</h3>
                 <Input setTouched={setTouched} invalid={!state.name && touched?.name} input={'input'}
