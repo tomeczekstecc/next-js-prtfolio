@@ -26,6 +26,7 @@
     "nodemailer": "^6.9.14",
     "react": "18.3.1",
     "react-dom": "18.3.1",
+    "react-hot-toast": "^2.4.1",
     "react-icons": "^5.2.1",
     "react-scroll": "^1.9.0",
     "sharp": "^0.33.4",
@@ -38,5 +39,8 @@
     "postcss": "^8.4.38",
     "prisma": "^5.16.0",
     "tailwindcss": "^3.4.4"
+  },
+  "resolutions": {
+    "eslint": "8.56.0"
   }
 }
