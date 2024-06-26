@@ -128,12 +128,12 @@ const ProjectsSection = async () => {
                                         <p className={'text-center md:text-left'}>{project.attributes.description}</p>
                                     </div>
                                     <div className={'hidden flex-wrap md:flex '}>
-                                        {/*{project?.techs?.split(',').map((tech, index) => (*/}
-                                        {/*    <div key={index}*/}
-                                        {/*         className={'bg-gray-200 p-1 mr-1 mt-1 text-gray-600 rounded font-semibold'}>*/}
-                                        {/*        {tech}*/}
-                                        {/*    </div>*/}
-                                        {/*))}*/}
+                                        {project?.attributes.techs.split(',').map((tech, index) => (
+                                            <div key={index}
+                                                 className={'bg-gray-200 p-1 mr-1 mt-1 text-gray-600 rounded font-semibold'}>
+                                                {tech}
+                                            </div>
+                                        ))}
                                     </div>
                                     <div className={'flex flex-col md:flex-row md:space-x-10'}>
 
