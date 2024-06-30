@@ -14,7 +14,7 @@ const Footer = () => {
             <div className='mx-auto  p-4 flex flex-col text-center text-neutral-900 md:flex-row md:justify-between'>
                 <div
                     className='flex flex-row items-center justify-center space-x-1 text-neutral-500 dark:text-neutral-100'>
-                    © 2023 Tomasz Steć
+                    © 2023-2024 Tomasz Steć
                     <a
                         title={'link do sekcji głównej'}
                         href='/'
