@@ -16,7 +16,7 @@ type Image = {
     }
 }
 
-type Project = {
+export type Project = {
     attributes: {
         name: string
         description: string
@@ -25,6 +25,9 @@ type Project = {
         repo: string
         link: string
         techs: string
+        sort: number
+        hiderepo?: string
+
     }
 }
 
@@ -32,6 +35,7 @@ type Project = {
 const ProjectsSection = async () => {
 
     const data = await getAllProjects()
+
 
     return (
         <section id={'projects'}>
@@ -42,10 +46,7 @@ const ProjectsSection = async () => {
 
             <div className={'flex flex-col space-y-28 mt-16'}>
                 {data.map((project: Project, index: string) => {
-
-
-                    console.log(project.attributes.link, 'data')
-
+                    console.log(project.attributes.hiderepo)
                     return <div key={index}>
                         <SlideUp offset={'-300px 0px -300px 0px'}>
                             <div className={'flex flex-col md:flex-row md:space-x-10'}>
@@ -75,15 +76,16 @@ const ProjectsSection = async () => {
                                     <div className={'flex flex-col md:flex-row md:space-x-10'}>
 
                                         <div className={'flex space-x-3'}>
-                                            <Link title={'link do repozytorium'} href={project.attributes.repo}
-                                                  target={'_blank'}>
-                                                <div
-                                                    className={'hover:-translate-y-1 transition-transform cursor-pointer'}>{
-                                                    project.attributes.icon === 'gitlab' ? <SiGitlab size={30}/> :
-                                                        <SiGitlab size={30}
-                                                        />}
-                                                </div>
-                                            </Link>
+                                            {project.attributes.hiderepo !== 'yes' &&
+                                                <Link title={'link do repozytorium'} href={project.attributes.repo}
+                                                      target={'_blank'}>
+                                                    <div
+                                                        className={'hover:-translate-y-1 transition-transform cursor-pointer'}>{
+                                                        project.attributes.icon === 'gitlab' ? <SiGitlab size={30}/> :
+                                                            <SiGitlab size={30}
+                                                            />}
+                                                    </div>
+                                                </Link>}
                                             <br/>
                                             {project.attributes.link !== '/' &&
                                                 <Link href={project.attributes.link} title={'link do projektu'}>
